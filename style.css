@@ -1,0 +1,63 @@
+html {
+    font-size: 62.5%;
+    font-family:    "Maiandra GD", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: #ff0000;
+    text-align: center;
+}
+
+#list {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.sous_menu {
+    padding: 20px;
+    display: none;
+    position: absolute;
+}
+
+
+.menu_deroulant:hover > .sous_menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.container > i {
+    display: none;
+}
+/**
+* responsive
+ */
+@media screen and (max-width: 1050px) {
+
+        .container > i {
+            display: block;
+        }
+
+        #list {
+            display: none;
+        }
+
+        .container:hover > #list {
+            display: flex;
+            flex-direction: column;
+        }
+}
